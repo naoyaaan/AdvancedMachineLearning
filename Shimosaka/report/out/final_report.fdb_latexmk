@@ -1,10 +1,10 @@
 # Fdb version 3
-["dvipdf"] 1627377443 "out/final_report.dvi" "out/final_report.pdf" "out/final_report" 1627378221
-  "out/final_report.dvi" 1627377443 19320 40b48c688a83284366ff2874f49853c5 "latex"
+["dvipdf"] 1627450673 "out/final_report.dvi" "out/final_report.pdf" "out/final_report" 1627450677
+  "out/final_report.dvi" 1627450672 19408 f7055caf25d32fcf0d271319d8a3d23e "latex"
   (generated)
   "out/final_report.pdf"
-["latex"] 1627377438 "c:/Users/miya7/Google ドライブ/M1/Advanced Machine Learing/AdvancedMachineLearning/Shimosaka/report/final_report.tex" "out/final_report.dvi" "final_report" 1627378221
-  "c:/Users/miya7/Google ドライブ/M1/Advanced Machine Learing/AdvancedMachineLearning/Shimosaka/report/final_report.tex" 1627378220 13139 64d176cd254536514e1f44937c7c98fd ""
+["latex"] 1627450668 "c:/Users/miya7/Google ドライブ/M1/Advanced Machine Learing/AdvancedMachineLearning/Shimosaka/report/final_report.tex" "out/final_report.dvi" "final_report" 1627450677
+  "c:/Users/miya7/Google ドライブ/M1/Advanced Machine Learing/AdvancedMachineLearning/Shimosaka/report/final_report.tex" 1627450673 13231 445d7c5c57da75a7d098644b114ae35c ""
   "c:/w32tex/share/texmf-dist/fonts/tfm/ptex-fonts/standard/goth10.tfm" 1519818042 1196 5981e79c37b2cfd27b3612a6783cd4b6 ""
   "c:/w32tex/share/texmf-dist/fonts/tfm/ptex-fonts/standard/min10.tfm" 1519818042 1196 1be730212205a270378fba11a44765dc ""
   "c:/w32tex/share/texmf-dist/fonts/tfm/ptex-fonts/standard/min6.tfm" 1519818042 1196 ede67ffb8cb4a6a8b9436c82b428664c ""
@@ -68,8 +68,8 @@
   "extractbb -B cropbox -O p2-4.png" 0 -1 0 ""
   "extractbb -B cropbox -O p3-3-1.png" 0 -1 0 ""
   "extractbb -B cropbox -O p3-3-2.png" 0 -1 0 ""
-  "final_report.tex" 1627378220 13139 64d176cd254536514e1f44937c7c98fd ""
-  "out/final_report.aux" 1627377443 458 9120cc87e579f34c53504e0108ef6f53 ""
+  "final_report.tex" 1627450673 13231 445d7c5c57da75a7d098644b114ae35c ""
+  "out/final_report.aux" 1627450672 458 9120cc87e579f34c53504e0108ef6f53 ""
   "p1-1.png" 1627369281 16082 14ae826454b7150aecb2e33f0c8818a0 ""
   "p1-4.png" 1627369300 16028 01d3c9ac21805fdff3c36b635c04e930 ""
   "p2-1.png" 1625908404 28603 baf24fa10bb1a83f754a6697744f5655 ""
@@ -79,6 +79,6 @@
   "p3-3-2.png" 1627375472 11935 002c73c46d88971fc8a6a2292dbd45d5 ""
   "plistings.sty" 1564358641 11569 b67d28c512c209fb67b02c72bef05f01 ""
   (generated)
-  "out/final_report.log"
-  "out/final_report.aux"
   "out/final_report.dvi"
+  "out/final_report.aux"
+  "out/final_report.log"
