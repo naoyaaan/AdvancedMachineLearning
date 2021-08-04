@@ -1,10 +1,10 @@
 # Fdb version 3
-["dvipdf"] 1627915297 "out/final_report.dvi" "out/final_report.pdf" "out/final_report" 1627915399
-  "out/final_report.dvi" 1627915297 6296 687ad5d3f729cb2c20dfb20b9339a18b "latex"
+["dvipdf"] 1628064490 "out/final_report.dvi" "out/final_report.pdf" "out/final_report" 1628064496
+  "out/final_report.dvi" 1628064489 14916 cea2d962ba05576dffcebd524e7228e0 "latex"
   (generated)
   "out/final_report.pdf"
-["latex"] 1627915293 "c:/Users/miya7/Google ドライブ/M1/Advanced Machine Learing/AdvancedMachineLearning/Okazaki/report/final_report.tex" "out/final_report.dvi" "final_report" 1627915399
-  "c:/Users/miya7/Google ドライブ/M1/Advanced Machine Learing/AdvancedMachineLearning/Okazaki/report/final_report.tex" 1627915392 4696 0ae438de8165babbec9a5c4ec6fb3e0d ""
+["latex"] 1628064481 "c:/Users/miya7/Google ドライブ/M1/Advanced Machine Learing/AdvancedMachineLearning/Okazaki/report/final_report.tex" "out/final_report.dvi" "final_report" 1628064496
+  "c:/Users/miya7/Google ドライブ/M1/Advanced Machine Learing/AdvancedMachineLearning/Okazaki/report/final_report.tex" 1628064474 10534 fa74832bf2c0619ce46e3071ca1ba240 ""
   "c:/w32tex/share/texmf-dist/fonts/tfm/ptex-fonts/standard/goth10.tfm" 1519818042 1196 5981e79c37b2cfd27b3612a6783cd4b6 ""
   "c:/w32tex/share/texmf-dist/fonts/tfm/ptex-fonts/standard/min10.tfm" 1519818042 1196 1be730212205a270378fba11a44765dc ""
   "c:/w32tex/share/texmf-dist/fonts/tfm/ptex-fonts/standard/min6.tfm" 1519818042 1196 ede67ffb8cb4a6a8b9436c82b428664c ""
@@ -30,6 +30,7 @@
   "c:/w32tex/share/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm" 1136768653 1124 6c73e740cf17375f03eec0ee63599741 ""
   "c:/w32tex/share/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm" 1136768653 1116 933a60c408fc0a863a92debe84b2d294 ""
   "c:/w32tex/share/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm" 1136768653 1120 8b7d695260f3cff42e636090a8002094 ""
+  "c:/w32tex/share/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm" 1136768653 768 1321e9409b4137d6fb428ac9dc956269 ""
   "c:/w32tex/share/texmf-dist/tex/latex/amsfonts/amsfonts.sty" 1358197772 5949 3f3fd50a8cc94c3d4cbf4fc66cd3df1c ""
   "c:/w32tex/share/texmf-dist/tex/latex/amsfonts/amssymb.sty" 1358197772 13829 94730e64147574077f8ecfea9bb69af4 ""
   "c:/w32tex/share/texmf-dist/tex/latex/amsmath/amsbsy.sty" 1522996966 2211 ca7ce284ab93c8eecdc6029dc5ccbd73 ""
@@ -61,13 +62,27 @@
   "extractbb -B cropbox -O p1-2.png" 0 -1 0 ""
   "extractbb -B cropbox -O p1-3.png" 0 -1 0 ""
   "extractbb -B cropbox -O p1-4.png" 0 -1 0 ""
-  "final_report.tex" 1627915392 4696 0ae438de8165babbec9a5c4ec6fb3e0d ""
-  "out/final_report.aux" 1627915297 353 c1ac491e0da0d1a1f346341bbc3deded ""
+  "extractbb -B cropbox -O p2-1.png" 0 -1 0 ""
+  "extractbb -B cropbox -O p2-2.png" 0 -1 0 ""
+  "extractbb -B cropbox -O p3-1.png" 0 -1 0 ""
+  "extractbb -B cropbox -O p3-2.png" 0 -1 0 ""
+  "extractbb -B cropbox -O p3-3.png" 0 -1 0 ""
+  "extractbb -B cropbox -O p4-1.png" 0 -1 0 ""
+  "extractbb -B cropbox -O p4-2.png" 0 -1 0 ""
+  "final_report.tex" 1628064474 10534 fa74832bf2c0619ce46e3071ca1ba240 ""
+  "out/final_report.aux" 1628064489 699 1c12162ac9e3417a36af7a7cffbe2a46 ""
   "p1-2.png" 1627793092 7833 bccada6842937f8527ce502b15030f41 ""
   "p1-3.png" 1627794605 6172 513b137f5310636d8ed50637b22386b5 ""
   "p1-4.png" 1627795785 4370 33e2f58304d7cacfdfc2c1c51d746bc3 ""
+  "p2-1.png" 1628063703 9157 4852e075ee472941b097e0423a616f8f ""
+  "p2-2.png" 1628063853 91205 31b2eefc14a969233a0a6a6de3fd5965 ""
+  "p3-1.png" 1627973991 144636 54880e1ae2c8b9671786fafc81a1687e ""
+  "p3-2.png" 1627974398 162212 ae7c60e9b022a646573d9d977b552236 ""
+  "p3-3.png" 1627979170 140297 d2205c6016f838931d892525885f6168 ""
+  "p4-1.png" 1627990852 194059 66640036e125757b0372a26e198a956d ""
+  "p4-2.png" 1627991763 142091 f9f1bd8de77f0361f975f02f3f6bcd2b ""
   "plistings.sty" 1564358641 11569 b67d28c512c209fb67b02c72bef05f01 ""
   (generated)
-  "out/final_report.aux"
   "out/final_report.log"
   "out/final_report.dvi"
+  "out/final_report.aux"
