@@ -60,7 +60,7 @@
 
 \vspace{80mm}
 
-提出日：2021年 8月10日
+提出日：2021年 8月9日
 
 \vspace{10mm}
 
@@ -75,7 +75,7 @@
 
 \vspace{20mm}
 
-{\bf {\LARGE 氏名：宮崎　直哉}}
+{\bf {\LARGE 宮崎　直哉}}
 \end{center}
 
 
@@ -183,7 +183,7 @@
 Word Similarity Task(単語の類似性を測るタスク)では、モデルによる単語間の類似性の評価と人間による評価の相関を計測する。
 
 \subsubsection*{データセットの統計情報}
-データセットの統計情報は以下の表のようである。
+データセットの統計情報は以下の表\cite{Recursive NN}のようである。
 
 \begin{figure}[hbtp]
     \centering
@@ -195,7 +195,7 @@ pairsは類似性を測る二つの単語を、ratersは評価した人間の人
 \subsubsection*{評価の尺度}
 上記のタスクによる評価には Spearman’s rank correlation coefficientの値($\rho$×100)が用いられる。
 $\rho$は[-1,1]の値をとり、この値が大きいほど、人間の評価とモデルの評価に相関があることを表している。
-以下の表は実際にこのデータセットを用いてモデルを評価したときの結果である。
+以下の表\cite{fasttext}は実際にこのデータセットを用いてモデルを評価したときの結果である。
 
 \begin{figure}[hbtp]
     \centering
@@ -214,7 +214,7 @@ IMDbはthe Internete Movie Databaseというサイトにおける、ポジティ
 
 \subsubsection*{評価の尺度}
 IMDbを用いたSentiment Analysisでは、モデルのポジティブorネガティブの正答率(\%)を用いて評価している。
-以下の表は、現在のIMDbにおけるモデルの予測精度のランキングである。
+以下の表\cite{NLP-progress}は、現在のIMDbにおけるモデルの予測精度のランキングである。
 \begin{figure}[hbtp]
     \centering
     \includegraphics[width=10cm]{p3-3.png}
@@ -228,7 +228,7 @@ IMDbを用いたSentiment Analysisでは、モデルのポジティブorネガ�
 
 2. 並列化が可能
 
-まずTransformerでは下図のような構造を用いている。
+まずTransformerでは下図\cite{Attention}のような構造を用いている。
 
 \begin{figure}[hbtp]
     \centering
@@ -236,8 +236,7 @@ IMDbを用いたSentiment Analysisでは、モデルのポジティブorネガ�
 \end{figure}
 
 この中でもTransformerにおいてはSelf-Attentionをベースとした構造となっている。
-RNNをベースとした構造と比較したのが下表である。
-
+RNNをベースとした構造と比較したのが下表\cite{Attention}である。
 \begin{figure}[hbtp]
     \centering
     \includegraphics[width=12cm]{p4-1.png}
@@ -275,9 +274,9 @@ traditional language modeling tasks, "closed book" question answering tasks, mod
 GPT-3では勾配の更新やアフィンチューニングなしに多くの自然言語処理のデータセットにおいて強力なパフォーマンスを達成した。zero-shot, one-shot learingでは有望な結果が得られ、few-shot learningでは大体のタスクにおいて最新研究と同等か、それ以上の結果を出している。
 
 \subsection*{GPT-3モデルでも実現できなかったこと}
+ANLIデータセットのような自然言語推論タスクや、RACEやQuACのような読解のデータセットにおいてはfew-shot learningは苦戦している。テキスト合成では意味的に同じことを繰り返すことがあるなどの問題があることがある。GPT-3には双方向性がないので双方向性が必要なタスクが少々困難、学習において重要度を考慮しておらず、効率が悪いこと、必要な容量が過多で不便であること、GPT-3の出力については解釈不能であることなどの問題点が残っている。
 
-
-
+\newpage
 \begin{thebibliography}{99}
     \bibitem{fasttext} Piotr Bojanowski, Edouard Grave, Armand Joulin, Tomas Mikolov. Enriching Word Vectors with Subword Information. arXiv:1607.04606. 2017
     \bibitem{Recursive NN} Minh-Thang, Luong Richard Socher, Christopher D. Manning. Better Word Representations with Recursive Neural Networks for Morphology.
