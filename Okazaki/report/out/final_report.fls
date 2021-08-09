@@ -123,4 +123,6 @@ INPUT p4-2.png
 INPUT extractbb -B cropbox -O p4-2.png
 INPUT p4-1.png
 INPUT extractbb -B cropbox -O p4-1.png
+INPUT p5-1.png
+INPUT extractbb -B cropbox -O p5-1.png
 INPUT out/final_report.aux

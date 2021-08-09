@@ -215,7 +215,7 @@ IMDbはthe Internete Movie Databaseというサイトにおける、ポジティ
 \subsubsection*{評価の尺度}
 IMDbを用いたSentiment Analysisでは、モデルのポジティブorネガティブの正答率(\%)を用いて評価している。
 以下の表は、現在のIMDbにおけるモデルの予測精度のランキングである。
-\begin{figure}
+\begin{figure}[hbtp]
     \centering
     \includegraphics[width=10cm]{p3-3.png}
 \end{figure}
@@ -246,13 +246,36 @@ RNNをベースとした構造と比較したのが下表である。
 これによると、RNNのレイヤーでは、$O(n^2\cdot d)$の計算量となっているが、Self-Attentionでは$O(n \cdot d^2)$となっている。
 これだけではRNNがTransfomerより計算量が早いことはわからない。しかし、n(sequence length)やd(representation dimension)のサイズに注目してみると、たいていの場合$n < d$とnよりもdのほうがはるかに大きくなっている。そのため、Self-Attentionのレイヤーのほうが計算量が少ないことがわかる。
 
-また、RNNでは入力に対してステップを経て処理をするので、Maximium path lengthの計算量は$O(n)$であるのに対して、Self-Attentionは並列計算を行うので、Maximium path lengthの計算量は$O(1)$となっている。GPU演算を行うことを考えるとSelf-Attentionは並列化できることというのが計算量の削減につなっており、RNNの構造よりも優れた点であるといえる。
-
-
+また、RNNでは入力に対してステップを経て処理をするので、Maximium path lengthの計算量は$O(n)$である。それにたいして、Self-Attentionは並列計算を行うので、Maximium path lengthの計算量は$O(1)$となっている。GPU演算を行うことを考えるとSelf-Attentionは並列化できることというのが計算量の削減につなっており、RNNの構造よりも優れた点であるといえる。
 
 
 \newpage
 \section{問題5}
+\subsection*{この論文で検証したい仮説}
+近年のTransformerのような自然言語処理システムでは、事前に学習された言語表現を用いる傾向がある。これらのモデルは文章読解や質問応答など多くの自然言語処理のタスクにおいて、充実した成果を挙げている。しかし、これらのモデルはタスクにとらわれない構造をしているものの、タスクに特化したデータセットとファインチューニングが必要である。これには、言語モデルの応用を制限してしまったり、ファインチューンによってきわめて限定的なタスク分布となってしまったり、人間であればほとんどの言語タスクを学習するためにたくさんの教師付きデータセットを必要としない、などの問題点がある。この論文では、データセットに特化した事前学習とファインチューニングを必要としないGPT-3のモデルで最新の研究を超えるような性能を発揮することを検証する。
+
+\subsection*{その仮説を検証するための実験方法}
+1750億のパラメーターを持つ自己回帰モデルのGPT-3を学習させ、文章学習能力を測ることで仮説を検証している。具体的には、20を超える自然言語処理のデータセットと、訓練データに直接含まれていないようなタスクへの高速な適応度をテストするために設計されたいくつかの重要なタスクにおいてGPT-3を評価している。各データセットにおいて、"few-shot learning"、"one-shot learning"、"zero-shot learning"の3つの状況において評価する。few,one,zeroはテストする際のデモンストレーションの数を表す。few-shot learningでは10-100のデモンストレーションを用いる。
+
+\subsection*{GPT-3モデルのアーキテクチャ}
+GPT-3ではGPT-2\cite{GPT-2}と同様のアーキテクチャを用いている。しかしGPT-3では、transformerにおいて、高密度でまとめられたスパースなアテンションが用いられている。
+
+\subsection*{GPT-3モデルの学習に用いられたデータ}
+下表\cite{GPT-3}に記載されているデータセットの集合を用いている。
+\begin{figure}[hbtp]
+    \centering
+    \includegraphics[width=15cm]{p5-1.png}
+\end{figure}
+
+\subsection*{実験に用いられたタスクやデータセットの概要}
+以下に挙げるようなタスクやデータセットにおいて実験している。
+traditional language modeling tasks, "closed book" question answering tasks, model's ability to translate betweeen language, Winogra Schema-like tasks, commonsense reasoning or question answering, reading comprehension tasks, SuperGLUE, NLI, additional tasks
+
+\subsection*{実験結果の概要およびGPT-3で実現できたこと}
+GPT-3では勾配の更新やアフィンチューニングなしに多くの自然言語処理のデータセットにおいて強力なパフォーマンスを達成した。zero-shot, one-shot learingでは有望な結果が得られ、few-shot learningでは大体のタスクにおいて最新研究と同等か、それ以上の結果を出している。
+
+\subsection*{GPT-3モデルでも実現できなかったこと}
+
 
 
 \begin{thebibliography}{99}
@@ -260,8 +283,10 @@ RNNをベースとした構造と比較したのが下表である。
     \bibitem{Recursive NN} Minh-Thang, Luong Richard Socher, Christopher D. Manning. Better Word Representations with Recursive Neural Networks for Morphology.
     \bibitem{NLP-progress} NLP-progress. \url{http://nlpprogress.com/english/sentiment_analysis.html}. 閲覧日：2021年8月3日
     \bibitem{Attention} Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Lukasz Kaiser, Illia Polosukhin. Attention Is All You Need. arXiv:1706.03762. 2017
-    \bibitem{}
-    \bibitem{}
+    \bibitem{GPT-3}　T. B. Brown, et al. Language Models are Few-Shot Learners. arXiv:2005.14165.
+    2020.
+    \bibitem{GPT-2} Alec Radford, Jeffrey Wu, Rewon Child, David Luan, Dario Amodei, and Ilya Sutskever. Language
+    models are unsupervised multitask learners, 2019.
     \bibitem{}
     \bibitem{}
     \bibitem{}
